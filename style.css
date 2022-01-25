@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap');
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
-body{
+body {
     min-height: 100vh;
     max-width: 100%;
     width: 100%;
     margin: 0;
-    background:linear-gradient(to right, #F581C2 50% ,#fff 50%);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   z-index: -1;
+    background: linear-gradient(to right, #F581C2 50%, #fff 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: -1;
 }
 
 
@@ -35,7 +37,7 @@ body{
 
 .header-logo {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     width: 200px;
     height: 100px;
@@ -47,7 +49,22 @@ body{
     cursor: pointer;
     border: none;
     background: transparent;
-    
+
+}
+
+.menu-close {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 82px;
+    top: 52px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    z-index: 1;
+
 }
 
 
@@ -65,244 +82,260 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width:80vw;
+    width: 80vw;
     min-height: 550px;
     background-color: #fff;
     z-index: 0;
     left: 130px;
     top: 35px;
     border-radius: 10px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.12) , 2px 2px 6px rgba(0, 0, 0, 0.12);
-   
-    
-    }
-
-    .nike-logo {
-      
-        width: 55px;
-        height: 50px;
-      
-    }
-
-    .nike-header {
-    
-        font-family: 'Android',sans-serif;
-        font-size: 17px;
-        letter-spacing: 2px;
-    }
-
-    .list-container {
-        flex-wrap: wrap;
-        height: auto;
-        width: 50vw;
-        display: flex;
-        align-items: center;
-        padding: 15px;
-        justify-content: space-between;
-        position: relative;
-        
-    }
-
-    ul {
-        justify-content: center; 
-        list-style: none;
-       display: flex;
-       align-items: center;
-        
-    }
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.12), 2px 2px 6px rgba(0, 0, 0, 0.12);
 
 
-    li a {
-        padding: 5px 60px 10px 0;
+}
 
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 13px;
-        color: #808080;
-        font-family: 'Inter' ,sans-serif;
-        font-weight: 600;
-        
-        
-    }
+.nike-logo {
 
-    li a:hover {
-        color: #F581C2;
-    }
+    width: 55px;
+    height: 50px;
 
+}
 
-    .buy-now {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: nowrap;
-        height: 46vh;
-          width: 30vw;
-         font-family: 'Inter',
-         sans-serif;
-          top: 150px;
-          left: 100px;
-    }
+.nike-header {
 
-    .buy-now-header {
-        min-width: 30vw;
-        min-height: 100px;
-        text-align: center;
-    }
-    
-    .buy-now-nike-header-text {
-        text-transform: uppercase;
-        font-family: 'Karla', sans-serif;
-        font-size: 40px;
-        letter-spacing: -1px;
-    }
+    font-family: 'Android', sans-serif;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
 
-    .tm {
-        font-size: 10px;
-        bottom: 30px;
-        position: relative;
-        color: #808080;
-         font-family: 'Inter',
-         sans-serif;
-        
-    }
+.list-container {
+    flex-wrap: wrap;
+    height: auto;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-between;
+    position: relative;
 
-    .text {
-        min-width: 30vw;
-        min-height: 100px;
-    }
+}
+
+ul {
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
 
 
+li a {
+    padding: 5px 60px 10px 0;
 
-    .buy-now p {
-        margin-top: 0;
-        text-align: center;
-        line-height: 30px;
-        color: #808080;
-        font-family: 'Inter',
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #808080;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+
+
+}
+
+li a:hover {
+    color: #F581C2;
+}
+
+
+.buy-now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 46vh;
+    width: 30vw;
+    font-family: 'Inter',
         sans-serif;
-       
-    }
+    top: 150px;
+    left: 100px;
+}
 
-    .btn {
-        height: 50px;
-        width: 140px;
-        font-family: 'Karla',
+.buy-now-header {
+
+    min-width: 30vw;
+    min-height: 100px;
+    text-align: center;
+}
+
+.buy-now-nike-header-text {
+    text-transform: uppercase;
+    font-family: 'Karla', sans-serif;
+    font-size: 40px;
+    letter-spacing: -1px;
+}
+
+.tm {
+    font-size: 10px;
+    bottom: 30px;
+    position: relative;
+    z-index: -1;
+    color: #808080;
+    font-family: 'Inter',
         sans-serif;
-        text-transform: uppercase;
-        color: #fff;
-         background: linear-gradient(to left, #fc6767, #ec008c);
-         border:none;
-         outline: none;
-         
 
-    }
+}
 
-    .btn:active {
-        height: 47px;
-        width: 135px;
-
-    }
-
-    .btn:hover {
-         background: linear-gradient(to left, #e96443, #904e95);
-       
-    }
-
-    .icons {
-        width: 30vw;
-        height: 5vh;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-evenly;
-      
-    }
-
-    .icons-img {
-      
-      width:20px;
-    
-      
-
-    }
-
-    .icons-img:hover {
-          width: 25px;
-          transition: 0.5s;
-          
-    }
-
-    .nike-shoe{
-        object-fit: cover;
-        max-width: 100%;
-        max-height: 100%;
-
-    }
-
-    .nike-image-container {
-        object-fit: contain;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 25vw;
-        min-width: auto;
-     
-    }
+.text {
+    min-width: 30vw;
+    min-height: 100px;
+}
 
 
-    @media only screen and (max-width:1090px) {
-    ul {
+
+.buy-now p {
+    margin-top: 0;
+    text-align: center;
+    line-height: 30px;
+    color: #808080;
+    font-family: 'Inter',
+        sans-serif;
+
+}
+
+.btn {
+    height: 50px;
+    width: 140px;
+    font-family: 'Karla',
+        sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(to left, #fc6767, #ec008c);
+    border: none;
+    outline: none;
+
+
+}
+
+.btn:active {
+    height: 47px;
+    width: 135px;
+
+}
+
+.btn:hover {
+    background: linear-gradient(to left, #e96443, #904e95);
+
+}
+
+.icons {
+    width: 20vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.icons-img {
+
+    width: 20px;
+
+
+
+}
+
+.icons-img:hover {
+    width: 25px;
+    transition: 0.5s;
+
+}
+
+.nike-shoe {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.nike-image-container {
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vw;
+    min-width: auto;
+
+}
+
+.btn-and-icons-mobile-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+@media only screen and (max-width:1090px) {
+    .list-wrapper {
         flex-direction: column;
         display: none;
-        position: absolute;
-        right: 30px;
-        top: 4px;
 
-      
     }
 
-    ul.show {
-        display: flex;
+    .list-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        bottom: 0;
+        backdrop-filter: blur(8px);
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 0;
     }
 
-    .list-container {
-       align-items: flex-end;
-       flex-direction: column;
-      
-       
-       
-       
+    .list-wrapper.show {
+        display: block;
+
+    }
+
+    .list-wrapper.show ul {
+      position: relative;
+       margin-top: 100px;
+    
+    }
+
+    .list-wrapper.show li {
+        position: relative;
+        padding: 50px;
+    }
+
+    .list-wrapper.show li a {
+        font-size: 21px;
        
     }
-      
-.bottom{
-    flex-direction: column;
+
+    .menu-close {
+        display: block;
+    }
+
+    .list-wrapper ul {
+        
+        flex-direction: column; 
+    } 
+
+    .bottom {
+        flex-direction: column;
+    }
+
+    .ham-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+
 }
-
-.ham-menu {
-    display: block;
-    position: absolute;
-   
-}
-
-
-
-}
-
-
-
-
-
-
-
-   
-
-
-
-
-
-   
-
-
-   

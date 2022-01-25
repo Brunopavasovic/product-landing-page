@@ -1,9 +1,13 @@
 const hamburger = document.getElementById("menu-btn");
-const list = document.querySelector("ul");
+const listWrapper = document.querySelector(".list-wrapper");
+const closeMenu = document.getElementById('close');
 
 hamburger.addEventListener('click', () => {
-    list.classList.toggle('show');
+    listWrapper.classList.toggle('show');
+  
 }
 )
 
-  
+closeMenu.addEventListener('click' , () => {
+    listWrapper.classList.remove('show');
+})
